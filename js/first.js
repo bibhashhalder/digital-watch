@@ -8,6 +8,7 @@ setInterval(()=>{
     let miniut =(today.getMinutes()<10?'0':'') +today.getMinutes()
     let second = (today.getSeconds()<10?'0':'') +today.getSeconds()
     let daylist =["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"]
+    daylist = daylist[day]
     let months = [
         "Jan", "Feb", "Mar", "April", "May", "June",
         "July", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -35,7 +36,7 @@ setInterval(()=>{
         }
     }
     document.getElementById('element').innerText =`${hour} : ${miniut} : ${second} ${prepend} 
-    ${daylist[day]} ${date} ${months} ${year}`
+    ${daylist} ${date} ${months} ${year}`
 },1000)
 
 
